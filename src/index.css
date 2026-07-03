@@ -692,7 +692,7 @@ html[data-theme='dark'] .meta-tag {
 
 .detail-title {
   font-family: var(--font-serif);
-  font-size: 38px;
+  font-size: 32px;
   text-align: center;
   margin-top: 0;
   margin-bottom: 28px;
@@ -940,6 +940,7 @@ html[data-theme='dark'] .meta-tag {
 .pt-10 { padding-top: 10px; }
 .pt-20 { padding-top: 20px; }
 .p-15 { padding: 15px; }
+.p-12 { padding: 12px; }
 .p-20 { padding: 20px; }
 .pl-18 { padding-left: 18px; }
 .fs-11 { font-size: 11px; }
@@ -1490,30 +1491,30 @@ html[data-theme='dark'] .meta-tag {
 .modal-grid {
   display: grid;
   grid-template-columns: 1.15fr 1fr;
-  gap: 32px;
+  gap: 20px;
   align-items: start;
 }
 
 .modal-col-left {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   border-right: 1.5px dashed var(--border-light);
-  padding-right: 32px;
+  padding-right: 20px;
 }
 
 .modal-col-right {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 /* 将弹窗最大宽度由 680px 调整为 1050px 以适应双栏展卷效果，限制最大高度为 90vh 并使用极细滚动条作保护 */
 .modal-content {
   max-width: 1050px !important;
   width: 95% !important;
-  padding: 30px 40px !important;
-  max-height: 90vh !important;
+  padding: 20px 32px !important;
+  max-height: 92vh !important;
   overflow-y: auto !important; /* 当大高度溢出时允许滚动，避免被截断 */
   scrollbar-width: thin;
   scrollbar-color: var(--classic-gold) rgba(94, 111, 108, 0.03);

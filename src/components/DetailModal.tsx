@@ -154,10 +154,10 @@ ${mode === 'sibling' && activeSiblingMatch ? `----------------------------------
           
           {/* 左半栏：大名字、逐字音律与出处释义 */}
           <div className="modal-col-left">
-            <h2 id="modal-title" className="detail-title" style={{ marginBottom: '15px' }}>{activeCandidate.fullName}</h2>
+            <h2 id="modal-title" className="detail-title" style={{ marginBottom: '8px' }}>{activeCandidate.fullName}</h2>
             
             {/* 逐字偏旁/五行详细剖析 */}
-            <div className="d-flex justify-center gap-10 mb-12 flex-wrap">
+            <div className="d-flex justify-center gap-10 mb-8 flex-wrap">
               {activeCandidate.firstName.split('').map((char, idx) => {
                 const info = charDict[char];
                 if (!info) return null;
@@ -170,17 +170,17 @@ ${mode === 'sibling' && activeSiblingMatch ? `----------------------------------
             </div>
 
             {/* 名字文脉与出处 */}
-            <div className="bg-gold-light-04 border-light-all p-15 radius-12 text-left">
+            <div className="bg-gold-light-04 border-light-all p-12 radius-12 text-left">
               <div className="color-gold font-bold fs-13 mb-5 font-serif">名字文脉出处：</div>
-              <div className="fs-13 color-muted" style={{ lineHeight: 1.6 }}>
+              <div className="fs-13 color-muted" style={{ lineHeight: 1.5 }}>
                 {activeCandidate.sourceDescription}
               </div>
             </div>
 
             {/* 音律文学特质点评 */}
-            <div className="bg-gold-light-04 border-light-all p-15 radius-12 text-left">
+            <div className="bg-gold-light-04 border-light-all p-12 radius-12 text-left">
               <div className="color-cinnabar font-bold fs-13 mb-5 font-serif">姓名音律文学评价：</div>
-              <div className="fs-13 color-muted" style={{ lineHeight: 1.6 }}>
+              <div className="fs-13 color-muted" style={{ lineHeight: 1.5 }}>
                 {getPhoneticEvaluation()}
               </div>
             </div>
@@ -219,10 +219,10 @@ ${mode === 'sibling' && activeSiblingMatch ? `----------------------------------
           <div className="modal-col-right">
             
             {/* 五格表格 */}
-            <h4 className="font-serif border-b pb-8 text-left fs-14" style={{ marginTop: 0, marginBottom: '10px' }}>
+            <h4 className="font-serif border-b pb-5 text-left fs-14" style={{ marginTop: 0, marginBottom: '8px' }}>
               三才五格数理分析
             </h4>
-            <table className="wuge-table" style={{ marginBottom: '15px' }}>
+            <table className="wuge-table" style={{ marginBottom: '8px' }}>
               <thead>
                 <tr>
                   <th>格位</th>
@@ -248,20 +248,20 @@ ${mode === 'sibling' && activeSiblingMatch ? `----------------------------------
             </table>
 
             {/* Sancai config */}
-            <div className="bg-gold-light-05 border-light-all p-15 radius-12 text-left" style={{ marginBottom: '15px' }}>
+            <div className="bg-gold-light-05 border-light-all p-12 radius-12 text-left" style={{ marginBottom: '8px' }}>
               <div className="d-flex justify-between align-center mb-5">
-                <span className="font-bold font-serif fs-15">
+                <span className="font-bold font-serif fs-14">
                   三才配比：{activeWuGe.sancai.config}
                 </span>
                 <span className={`wuge-lucky-tag ${activeWuGe.sancai.lucky}`} style={{ padding: '2px 8px' }}>{activeWuGe.sancai.lucky}</span>
               </div>
-              <div className="fs-13 color-muted" style={{ lineHeight: 1.6 }}>
+              <div className="fs-13 color-muted" style={{ lineHeight: 1.5 }}>
                 {activeWuGe.sancai.description}
               </div>
             </div>
 
             {/* 操作控制栏 */}
-            <div className="modal-action-bar" style={{ marginTop: '10px', gap: '10px' }}>
+            <div className="modal-action-bar" style={{ marginTop: '5px', gap: '10px' }}>
               <button className="classic-btn fs-13" onClick={handleCopyText}>
                 复制报告
               </button>
